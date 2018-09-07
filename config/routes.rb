@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :proficiencies
   resources :messages
   resources :languages
   resources :users
