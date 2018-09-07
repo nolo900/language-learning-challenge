@@ -12,7 +12,7 @@ class LanguagesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create language" do
     assert_difference('Language.count') do
-      post languages_url, params: { language: { avg_proficiency: @language.avg_proficiency, name: @language.name } }, as: :json
+      post languages_url, params: { language: { name: @language.name } }, as: :json
     end
 
     assert_response 201
@@ -24,13 +24,14 @@ class LanguagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update language" do
-    patch language_url(@language), params: { language: { avg_proficiency: @language.avg_proficiency, name: @language.name } }, as: :json
+    patch language_url(@language), params: { language: { name: @language.name } }, as: :json
     assert_response 200
   end
 
   test "should destroy language" do
+    @language3 = languages(:three)
     assert_difference('Language.count', -1) do
-      delete language_url(@language), as: :json
+      delete language_url(@language3), as: :json
     end
 
     assert_response 204
