@@ -9,3 +9,8 @@ two:
   email: MyString
   first_name: MyString
   last_name: MyString
+
+three:
+  email: MyString
+  first_name: MyString
+  last_name: MyString

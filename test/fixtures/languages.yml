@@ -2,8 +2,12 @@
 
 one:
   name: MyString
-  avg_proficiency: 9.99
+  avg_proficiency: 0.0
 
 two:
   name: MyString
-  avg_proficiency: 9.99
+  avg_proficiency: 0.0
+
+three:
+  name: MyString
+  avg_proficiency: 0.0
