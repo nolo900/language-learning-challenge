@@ -7,10 +7,27 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore all logfiles and tempfiles.
+.byebug_history
+
+!.keep
+*.DS_Store
+*.swo
+*.swp
+/.env.local
+/coverage/*
+/db/*.sqlite3
 /log/*
+/public/system
+/public/assets
+/tags
 /tmp/*
+.idea/
+.env
+/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity
 !/log/.keep
 !/tmp/.keep
-
-.byebug_history
+*.log
