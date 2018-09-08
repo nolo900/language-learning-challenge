@@ -3,9 +3,14 @@
 one:
   user: one
   language: one
-  proficiency_level: 1
+  proficiency_level: 3
 
 two:
+  user: two
+  language: two
+  proficiency_level: 1
+
+three:
   user: two
   language: two
   proficiency_level: 1

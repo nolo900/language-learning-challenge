@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: English
   avg_proficiency: 0.0
 
 two:
-  name: MyString
+  name: German
   avg_proficiency: 0.0
 
 three:
-  name: MyString
+  name: French
   avg_proficiency: 0.0
