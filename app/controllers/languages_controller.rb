@@ -35,7 +35,11 @@ class LanguagesController < ApplicationController
 
   # DELETE /languages/1
   def destroy
-    @language.destroy
+    if @language.destroy
+      render json: @language
+    else
+      render json: @language.errors, status: :unprocessable_entity
+    end
   end
 
   private

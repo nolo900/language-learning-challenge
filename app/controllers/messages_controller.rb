@@ -35,7 +35,11 @@ class MessagesController < ApplicationController
 
   # DELETE /messages/1
   def destroy
-    @message.destroy
+    if @message.destroy
+      render json: @message
+    else
+      render json: @message.errors, status: :unprocessable_entity
+    end
   end
 
   private
