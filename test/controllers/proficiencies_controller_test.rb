@@ -12,6 +12,7 @@ class ProficienciesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create proficiency" do
     assert_difference('Proficiency.count') do
+      @proficiency.language = languages(:five)
       post proficiencies_url, params: { proficiency: { language_id: @proficiency.language_id, proficiency_level: @proficiency.proficiency_level, user_id: @proficiency.user_id } }, as: :json
     end
 

@@ -11,3 +11,16 @@ two:
 three:
   name: French
   avg_proficiency: 0.0
+
+four:
+  name: Alien
+  avg_proficiency: 0.0
+
+five:
+  name: Mandrin
+  avg_proficiency: 0.0
+
+six:
+  name: Spanish
+  avg_proficiency: 0.0
+

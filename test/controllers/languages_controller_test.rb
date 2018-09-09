@@ -12,6 +12,7 @@ class LanguagesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create language" do
     assert_difference('Language.count') do
+      @language = Language.new(name: 'Swiss-German')
       post languages_url, params: { language: { name: @language.name } }, as: :json
     end
 
@@ -29,7 +30,7 @@ class LanguagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy language" do
-    @language3 = languages(:three)
+    @language3 = languages(:five)
     assert_difference('Language.count', -1) do
       delete language_url(@language3), as: :json
     end

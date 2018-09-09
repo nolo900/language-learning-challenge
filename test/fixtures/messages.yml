@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  sender: one
-  recipient: one
-  language: one
+  sender: five
+  recipient: six
+  language: three
   body: MyText
 
 two:
-  sender: two
-  recipient: two
-  language: two
+  sender: seven
+  recipient: eight
+  language: six
   body: MyText
