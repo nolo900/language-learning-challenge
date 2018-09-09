@@ -35,7 +35,11 @@ class ProficienciesController < ApplicationController
 
   # DELETE /proficiencies/1
   def destroy
-    @proficiency.destroy
+    if @proficiency.destroy
+      render json: @proficiency
+    else
+      render json: @proficiency.errors, status: :unprocessable_entity
+    end
   end
 
   private
