@@ -15,18 +15,27 @@ class ProficiencyTest < ActiveSupport::TestCase
   end
 
   test "that language avg proficiency gets calculated after each proficiency save" do
-    @language = languages(:two)
+    @language = languages(:four)
 
-    @proficiency2 = proficiencies(:two) #proficiency_level: 1
-    @proficiency3 = proficiencies(:three) #proficiency_level: 1
-    @proficiency2.proficiency_level = 3
-    @proficiency2.save!
+    @proficiency3 = proficiencies(:three)
+    @proficiency4 = proficiencies(:four)
 
-    @proficiency3.proficiency_level = 9
+    @proficiency3.proficiency_level = 3
     @proficiency3.save!
+
+    @proficiency4.proficiency_level = 9
+    @proficiency4.save!
 
     @language.reload
 
     assert_equal(6,@language.avg_proficiency)
+  end
+
+  test "that only one proficiency can exist for each language" do
+    @user = users(:one)
+    @existing_lang = @user.proficiencies.first.language
+    @proficiency = Proficiency.new(user:@user,language:@existing_lang)
+
+    assert_not(@proficiency.valid?)
   end
 end

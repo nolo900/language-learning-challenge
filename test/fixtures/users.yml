@@ -1,16 +1,41 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  email: MyString
+  email: user1@test.com
   first_name: MyString
   last_name: MyString
 
 two:
-  email: MyString
+  email: user2@test.com
   first_name: MyString
   last_name: MyString
 
 three:
-  email: MyString
+  email: user3@test.com
+  first_name: MyString
+  last_name: MyString
+
+four:
+  email: user4@test.com
+  first_name: MyString
+  last_name: MyString
+
+five:
+  email: user5@test.com
+  first_name: MyString
+  last_name: MyString
+
+six:
+  email: user6@test.com
+  first_name: MyString
+  last_name: MyString
+
+seven:
+  email: user7@test.com
+  first_name: MyString
+  last_name: MyString
+
+eight:
+  email: user8@test.com
   first_name: MyString
   last_name: MyString

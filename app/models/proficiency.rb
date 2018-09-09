@@ -10,6 +10,10 @@ class Proficiency < ApplicationRecord
                  :less_than_or_equal_to => 10,
                  :message => "is invalid" },
              on: [:create, :update]
+
+  validates :language, uniqueness: { scope: :user,
+                                     message: "can only have one proficiency per user." }
+
   after_save :update_language_avg_proficiency
 
   def update_language_avg_proficiency

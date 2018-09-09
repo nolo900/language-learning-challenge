@@ -12,5 +12,31 @@ two:
 
 three:
   user: two
-  language: two
+  language: four
   proficiency_level: 1
+
+four:
+  user: one
+  language: four
+  proficiency_level: 1
+
+five:
+  user: five
+  language: three
+  proficiency_level: 8
+
+six:
+  user: six
+  language: three
+  proficiency_level: 7
+
+seven:
+  user: seven
+  language: six
+  proficiency_level: 3
+
+eight:
+  user: eight
+  language: six
+  proficiency_level: 7
+
