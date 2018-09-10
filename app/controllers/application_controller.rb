@@ -1,16 +1,16 @@
 class ApplicationController < ActionController::API
-  rescue_from ActiveRecord::RecordNotFound, :with => :resource_not_found
+  rescue_from StandardError, :with => :general_error
 
   def index
-    render :plain => "Welcome to Language Learning via Penpal!"
+    render json: { message: "Welcome to Language Learning via Penpal!" }
   end
 
-  def error
-    render :plain => "Route not found."
+  def general_error(exception)
+    render json: { message: exception.message }
   end
 
-  def resource_not_found
-    render :plain => "Resource not found."
+  def route_error
+    render json: { message: "Route not found." }
   end
 
 end

@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :users
 
   root to: 'application#index'
-  match "*path" => "application#error", via: [:get, :post]
+  match "*path" => "application#route_error", via: [:get, :post]
 end
