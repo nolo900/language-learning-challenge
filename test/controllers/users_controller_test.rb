@@ -35,6 +35,6 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
       delete user_url(@user3), as: :json
     end
 
-    assert_response 204
+    assert_response 200
   end
 end

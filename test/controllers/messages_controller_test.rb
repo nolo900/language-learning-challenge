@@ -33,6 +33,6 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
       delete message_url(@message), as: :json
     end
 
-    assert_response 204
+    assert_response 200
   end
 end

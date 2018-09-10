@@ -34,6 +34,6 @@ class ProficienciesControllerTest < ActionDispatch::IntegrationTest
       delete proficiency_url(@proficiency), as: :json
     end
 
-    assert_response 204
+    assert_response 200
   end
 end
