@@ -1,24 +1,3 @@
-# README
+Simple Rails API Example 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This basic app allows users to signup, set a known language & proficiency in which they'd like to communicate, and send messages to other members speak that language and are close in proficiency. 
