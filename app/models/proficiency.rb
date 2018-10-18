@@ -17,13 +17,11 @@ class Proficiency < ApplicationRecord
   after_save :update_language_avg_proficiency
 
   def update_language_avg_proficiency
-      arr = []
-      language.proficiencies.each do |prof|
-        arr << prof.proficiency_level
-      end
-      new_avg = arr.inject{ |sum, el| sum + el }.to_f / arr.size
-      language.avg_proficiency = new_avg
-      language.save
+    arr = []
+    language.proficiencies.all.to_a.each { |p| arr << p.proficiency_level }
+    new_avg = arr.inject{ |sum, el| sum + el }.to_f / arr.size
+    language.avg_proficiency = new_avg
+    language.save
   end
 
 end
